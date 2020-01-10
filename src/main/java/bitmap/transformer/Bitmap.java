@@ -10,22 +10,24 @@ import java.io.IOException;
 public class Bitmap {
 // properties go here
 BufferedImage img = null;
-
+String outputPath;
 //    constructor method
     public Bitmap(String inputPath, String outputPath, String transform) throws IOException {
         try {
-            img = ImageIO.read(new File("resources/mario.bmp"));
+
+            img = ImageIO.read(new File("resources/" + inputPath));
         } catch (IOException e) {
             System.out.println(e);
         }
+
+        this.outputPath = outputPath;
     }
 
     public void flipVertically() {
     }
 
-//    static boolean ImageIO.write(RenderedImage im, String formatName, File output)  throws IOException {
     public void save() throws IOException {
 
-        ImageIO.write(img, "bmp", new File("resources/mario_test.bmp"));
+        ImageIO.write(img, "bmp", new File("resources/" + outputPath));
     }
 }

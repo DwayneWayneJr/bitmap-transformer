@@ -7,5 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-
+@Test
+    public void testSaveImage() {
+    boolean testSaveImage = true;
+    assertTrue(testSaveImage, bmp.save);
+}
 }
