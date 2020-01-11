@@ -11,6 +11,7 @@ public class Bitmap {
 // properties go here
 BufferedImage img = null;
 String outputPath;
+String inputPath;
 //    constructor method
     public Bitmap(String inputPath, String outputPath, String transform) throws IOException {
         try {
@@ -23,7 +24,14 @@ String outputPath;
         this.outputPath = outputPath;
     }
 
-    public void flipVertically() {
+    public void blackScale() {
+      int width = img.getWidth();
+      int height = img.getHeight();
+      for (int x = 0; x < width; x++) {
+          for (int y = 0; y < height; y++) {
+              img.setRGB(x, y, );
+          }
+      }
     }
 
     public void save() throws IOException {

@@ -19,7 +19,7 @@ public class App {
         Bitmap bmp = new Bitmap(inputPath, outputPath, transform);
 
 
-        bmp.flipVertically();
+        bmp.blackScale();
 
         bmp.save();
 
